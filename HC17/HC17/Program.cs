@@ -83,14 +83,6 @@ namespace ConsoleApplication4
                 endpoints.Add(endpoint);
 			}
 
-            //if (((line = file.ReadLine()) != null)) // Ler a segunda linha
-            //{
-            //	foreach (var a in line.Split(' '))
-            //	{
-            //		videos.Add(Convert.ToUInt32(a));
-            //	}
-            //}
-
             // Process Requests
             List<VideoRequest> videoRequests = new List<VideoRequest>();
             for (int i = 0; i < nRequests; i++)
