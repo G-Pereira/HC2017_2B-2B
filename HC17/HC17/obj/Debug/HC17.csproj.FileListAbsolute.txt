@@ -1,0 +1,5 @@
+c:\users\daniel silva\documents\visual studio 2015\Projects\HC17\HC17\bin\Debug\HC17.exe.config
+c:\users\daniel silva\documents\visual studio 2015\Projects\HC17\HC17\bin\Debug\HC17.exe
+c:\users\daniel silva\documents\visual studio 2015\Projects\HC17\HC17\bin\Debug\HC17.pdb
+c:\users\daniel silva\documents\visual studio 2015\Projects\HC17\HC17\obj\Debug\HC17.exe
+c:\users\daniel silva\documents\visual studio 2015\Projects\HC17\HC17\obj\Debug\HC17.pdb
