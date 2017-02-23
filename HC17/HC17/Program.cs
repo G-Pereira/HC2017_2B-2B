@@ -68,8 +68,8 @@ namespace ConsoleApplication4
                 line = file.ReadLine();
                 endpoint.dc_latency= Convert.ToUInt32(line.Split(' ')[0]);
                 endpoint.nCacheServers = Convert.ToUInt32(line.Split(' ')[1]);
-                CacheServer cachesrv;
-                // READ Cache Server
+                CacheServer cachesrv = new CacheServer();
+
                 endpoints.Add(endpoint);
 			}
 
