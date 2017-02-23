@@ -82,9 +82,11 @@ namespace ConsoleApplication4
                     cacheserver.latency = Convert.ToUInt32(line.Split(' ')[1]);
                     cacheserver.capacity = cacheServersCapacity;
                     cacheservers.Add(cacheserver);
+                    Console.WriteLine(" New Cache Server:\n  Latency: " + cacheserver.latency + "\n  Capacity: " + cacheserver.capacity);
                 }
                 endpoints.Add(endpoint);
-			}
+                Console.WriteLine("Constructed new Endpoint:\n  Latency: " + endpoint.dc_latency + "\n  Number of Servers: " + endpoint.nCacheServers);
+            }
 
             // Process Requests
             List<VideoRequest> videoRequests = new List<VideoRequest>();
