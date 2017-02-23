@@ -12,13 +12,20 @@ namespace ConsoleApplication4
         public CacheServer[] cache_servers { get; set; }
     }
 
-    public class CacheServer
-    {
-        public uint id { get; set; }
-        public uint latency { get; set; }
-    }
+	public class CacheServer
+	{
+		public uint id { get; set; }
+		public uint latency { get; set; }
+	}
 
-    class Program
+	public class VideoRequest
+	{
+		public uint id { get; set; }
+		public uint endpoint { get; set; }
+		public uint nRequests { get; set; }
+	}
+
+	class Program
 	{
 		static void Main(string[] args)
 		{
