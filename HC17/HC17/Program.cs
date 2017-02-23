@@ -82,17 +82,23 @@ namespace ConsoleApplication4
                     cacheserver.latency = Convert.ToUInt32(line.Split(' ')[1]);
                     cacheserver.capacity = cacheServersCapacity;
                     cacheservers.Add(cacheserver);
-                    Console.WriteLine(" New Cache Server:\n  Latency: " + cacheserver.latency + "\n  Capacity: " + cacheserver.capacity);
-
+                    
                     //Ordenar por ordem crescente
                     cacheservers.Sort((x, y) => x.latency.CompareTo(y.latency));
                 }
                 endpoints.Add(endpoint);
-                Console.WriteLine("Constructed new Endpoint:\n  Latency: " + endpoint.dc_latency + "\n  Number of Servers: " + endpoint.nCacheServers);
+            }
+            foreach (var endpoint in endpoints)
+            {
+                Console.WriteLine("Endpoint:\n  Latency: " + endpoint.dc_latency + "\n  Number of Servers: " + endpoint.nCacheServers);
+                foreach (var server in endpoint.cache_servers)
+                {
+                    Console.WriteLine(" Cache Server:\n  Latency: " + server.latency + "\n  Capacity: " + server.capacity);
+                }
             }
 
-            // Process Requests
-            List<VideoRequest> videoRequests = new List<VideoRequest>();
+                // Process Requests
+                List<VideoRequest> videoRequests = new List<VideoRequest>();
             for (int i = 0; i < nRequests; i++)
             {
                 string[] aux = file.ReadLine().Split(' ');
