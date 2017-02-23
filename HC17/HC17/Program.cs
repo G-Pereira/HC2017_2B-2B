@@ -82,6 +82,9 @@ namespace ConsoleApplication4
                     cacheserver.latency = Convert.ToUInt32(line.Split(' ')[1]);
                     cacheserver.capacity = cacheServersCapacity;
                     cacheservers.Add(cacheserver);
+
+                    //Ordenar por ordem crescente
+                    cacheservers.Sort((x, y) => x.latency.CompareTo(y.latency));
                 }
                 endpoints.Add(endpoint);
 			}
