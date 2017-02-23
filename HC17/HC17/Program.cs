@@ -38,6 +38,22 @@ namespace ConsoleApplication4
 					videos.Add(Convert.ToUInt32(a));
 				}
 			}
+			Console.WriteLine("Read "+videos.Count() +" videos.");
+			Console.WriteLine("Need to read " + nEndpoints + " endpoints.");
+
+			for(int i=0; i< nEndpoints; i++)
+			{
+				
+			}
+
+			//if (((line = file.ReadLine()) != null)) // Ler a segunda linha
+			//{
+			//	foreach (var a in line.Split(' '))
+			//	{
+			//		videos.Add(Convert.ToUInt32(a));
+			//	}
+			//}
+
 			// Suspend the screen.
 			Console.ReadLine();
 		}
