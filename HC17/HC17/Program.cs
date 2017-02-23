@@ -15,13 +15,13 @@ namespace ConsoleApplication4
 
 			string line;
 			string[] lines;
-            uint nVideos;
-            uint nEndpoints;
-            uint nRequests;
-            uint nCacheServers;
-            uint cacheServersCapacity;
+			uint nVideos;
+			uint nEndpoints;
+			uint nRequests;
+			uint nCacheServers;
+			uint cacheServersCapacity;
 
-            if(((line = file.ReadLine()) != null)) {
+			if(((line = file.ReadLine()) != null)) {
 				lines=line.Split(' ');
 				nVideos					= Convert.ToUInt32(lines[0]);
 				nEndpoints				= Convert.ToUInt32(lines[1]);
@@ -30,8 +30,8 @@ namespace ConsoleApplication4
 				cacheServersCapacity	= Convert.ToUInt32(lines[4]);
 			}
 
-            // Suspend the screen.
-            Console.ReadLine();
+			// Suspend the screen.
+			Console.ReadLine();
         }
     }
 
