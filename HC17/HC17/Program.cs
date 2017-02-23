@@ -31,8 +31,8 @@ namespace ConsoleApplication4
 	{
 		static void Main(string[] args)
 		{
-			// Open the file.
-			System.IO.StreamReader file = new System.IO.StreamReader("c:\\kittens.in");
+            // Open the file.
+            System.IO.StreamReader file = new System.IO.StreamReader(@"C:\kittens.in");
 
 			string line;
 			string[] lines;
