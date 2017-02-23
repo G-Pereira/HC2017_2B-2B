@@ -21,7 +21,7 @@ namespace ConsoleApplication4
 			uint nCacheServers;
 			uint cacheServersCapacity;
 
-			if(((line = file.ReadLine()) != null)) {
+			if((line = file.ReadLine()) != null) {
 				lines=line.Split(' ');
 				nVideos					= Convert.ToUInt32(lines[0]);
 				nEndpoints				= Convert.ToUInt32(lines[1]);
