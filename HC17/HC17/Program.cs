@@ -10,25 +10,28 @@ namespace ConsoleApplication4
     {
         static void Main(string[] args)
         {
-            int counter = 0;
-            string line;
+			// Open the file.
+			System.IO.StreamReader file = new System.IO.StreamReader("c:\\kittens.in");
 
-            uint nVideos;
-            uint endpoints;
+			string line;
+			string[] lines;
+			uint nVideos;
+			uint nEndpoints;
+			uint nRequests;
+			uint nCacheServers;
+			uint cacheServersCapacity;
 
-            // Read the file and display it line by line.
-            System.IO.StreamReader file = new System.IO.StreamReader("c:\\kittens.in");
-            while ((line = file.ReadLine()) != null)
-            {
-                //Console.WriteLine(line);
-                counter++;
-            }
+			if(((line = file.ReadLine()) != null)) {
+				lines=line.Split(' ');
+				nVideos					= Convert.ToUInt32(lines[0]);
+				nEndpoints				= Convert.ToUInt32(lines[1]);
+				nRequests				= Convert.ToUInt32(lines[2]);
+				nCacheServers			= Convert.ToUInt32(lines[3]);
+				cacheServersCapacity	= Convert.ToUInt32(lines[4]);
+			}
 
-            file.Close();
-            Console.WriteLine(counter);
-
-            // Suspend the screen.
-            Console.ReadLine();
+			// Suspend the screen.
+			Console.ReadLine();
         }
     }
 

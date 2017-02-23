@@ -6,3 +6,6 @@ c:\users\daniel silva\documents\visual studio 2015\Projects\HC17\HC17\obj\Debug\
 C:\Users\Daniel Silva\HC2017_2B-2B\HC17\HC17\bin\Debug\HC17.exe.config
 C:\Users\Daniel Silva\HC2017_2B-2B\HC17\HC17\obj\Debug\HC17.exe
 C:\Users\Daniel Silva\HC2017_2B-2B\HC17\HC17\obj\Debug\HC17.pdb
+C:\Users\Daniel Silva\HC2017_2B-2B\HC17\HC17\bin\Debug\HC17.exe
+C:\Users\Daniel Silva\HC2017_2B-2B\HC17\HC17\bin\Debug\HC17.pdb
+C:\Users\Daniel Silva\HC2017_2B-2B\HC17\HC17\obj\Debug\HC17.csprojResolveAssemblyReference.cache
