@@ -16,6 +16,8 @@ namespace ConsoleApplication4
 	{
 		public uint id { get; set; }
 		public uint latency { get; set; }
+        public uint capacity { get; set; }
+
 	}
 
 	public class VideoRequest
@@ -78,6 +80,7 @@ namespace ConsoleApplication4
                     CacheServer cacheserver = new CacheServer();
                     cacheserver.id = Convert.ToUInt32(line.Split(' ')[0]);
                     cacheserver.latency = Convert.ToUInt32(line.Split(' ')[1]);
+                    cacheserver.capacity = cacheServersCapacity;
                     cacheservers.Add(cacheserver);
                 }
                 endpoints.Add(endpoint);
