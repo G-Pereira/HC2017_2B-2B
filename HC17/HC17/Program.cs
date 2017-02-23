@@ -53,11 +53,17 @@ namespace ConsoleApplication4
 			Console.WriteLine("Read "+videos.Count() +" videos.");
 			Console.WriteLine("Need to read " + nEndpoints + " endpoints.");
 
-            
-			for(int i=0; i< nEndpoints; i++)
-			{
+            List<Endpoint> endpoints = new List<Endpoint>();
 
-			   
+            for (int i=0; i< nEndpoints; i++)
+			{
+                Endpoint endpoint = new Endpoint();
+                line = file.ReadLine();
+                endpoint.dc_latency= Convert.ToUInt32(line.Split(' ')[0]);
+                endpoint.nCacheServers = Convert.ToUInt32(line.Split(' ')[1]);
+                CacheServer cachesrv;
+                // READ Cache Server
+                endpoints.Add(endpoint);
 			}
 
 			//if (((line = file.ReadLine()) != null)) // Ler a segunda linha
