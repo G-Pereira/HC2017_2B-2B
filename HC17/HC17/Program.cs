@@ -64,7 +64,9 @@ namespace ConsoleApplication4
 
             for (int i=0; i< nEndpoints; i++)
 			{
-                Endpoint endpoint = new Endpoint();
+                Endpoint endpoint = new Endpoint(); // Create New Enpoint
+
+                // Reads a line containing latency and number of cache servers
                 line = file.ReadLine();
                 endpoint.dc_latency= Convert.ToUInt32(line.Split(' ')[0]);
                 endpoint.nCacheServers = Convert.ToUInt32(line.Split(' ')[1]);
