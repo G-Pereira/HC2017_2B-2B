@@ -83,6 +83,9 @@ namespace ConsoleApplication4
                     cacheserver.capacity = cacheServersCapacity;
                     cacheservers.Add(cacheserver);
                     Console.WriteLine(" New Cache Server:\n  Latency: " + cacheserver.latency + "\n  Capacity: " + cacheserver.capacity);
+
+                    //Ordenar por ordem crescente
+                    cacheservers.Sort((x, y) => x.latency.CompareTo(y.latency));
                 }
                 endpoints.Add(endpoint);
                 Console.WriteLine("Constructed new Endpoint:\n  Latency: " + endpoint.dc_latency + "\n  Number of Servers: " + endpoint.nCacheServers);
