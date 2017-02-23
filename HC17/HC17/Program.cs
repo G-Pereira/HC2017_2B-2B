@@ -13,6 +13,9 @@ namespace ConsoleApplication4
             int counter = 0;
             string line;
 
+            uint nVideos;
+            uint endpoints;
+
             // Read the file and display it line by line.
             System.IO.StreamReader file = new System.IO.StreamReader("c:\\kittens.in");
             while ((line = file.ReadLine()) != null)
