@@ -83,16 +83,34 @@ namespace ConsoleApplication4
                 endpoints.Add(endpoint);
 			}
 
-			//if (((line = file.ReadLine()) != null)) // Ler a segunda linha
-			//{
-			//	foreach (var a in line.Split(' '))
-			//	{
-			//		videos.Add(Convert.ToUInt32(a));
-			//	}
-			//}
+            //if (((line = file.ReadLine()) != null)) // Ler a segunda linha
+            //{
+            //	foreach (var a in line.Split(' '))
+            //	{
+            //		videos.Add(Convert.ToUInt32(a));
+            //	}
+            //}
 
-			// Suspend the screen.
-			Console.ReadLine();
+            // Process Requests
+            List<VideoRequest> videoRequests = new List<VideoRequest>();
+            for (int i = 0; i < nRequests; i++)
+            {
+                string[] aux = file.ReadLine().Split(' ');
+
+                VideoRequest videoRqst = new VideoRequest
+                {
+                    id = Convert.ToUInt32(aux[0]),
+                    endpoint = Convert.ToUInt32(aux[1]),
+                    nRequests = Convert.ToUInt32(aux[2])
+
+                };
+
+                videoRequests.Add(videoRqst);
+
+            }
+
+            // Suspend the screen.
+            Console.ReadLine();
 		}
 	}
 
