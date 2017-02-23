@@ -4,7 +4,21 @@ using System.Linq;
 
 namespace ConsoleApplication4
 {
-	class Program
+    public class Endpoint
+    {
+        public uint id { get; set; }
+        public uint nCacheServers { get; set; }
+        public uint dc_latency { get; set; }
+        public CacheServer[] cache_servers { get; set; }
+    }
+
+    public class CacheServer
+    {
+        public uint id { get; set; }
+        public uint latency { get; set; }
+    }
+
+    class Program
 	{
 		static void Main(string[] args)
 		{
@@ -39,9 +53,11 @@ namespace ConsoleApplication4
 			Console.WriteLine("Read "+videos.Count() +" videos.");
 			Console.WriteLine("Need to read " + nEndpoints + " endpoints.");
 
+            
 			for(int i=0; i< nEndpoints; i++)
 			{
-				
+
+			   
 			}
 
 			//if (((line = file.ReadLine()) != null)) // Ler a segunda linha
@@ -56,6 +72,8 @@ namespace ConsoleApplication4
 			Console.ReadLine();
 		}
 	}
+
+    
 
 
 }
