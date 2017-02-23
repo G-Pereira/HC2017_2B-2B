@@ -88,20 +88,14 @@ namespace ConsoleApplication4
             for (int i = 0; i < nRequests; i++)
             {
                 string[] aux = file.ReadLine().Split(' ');
-
                 VideoRequest videoRqst = new VideoRequest
                 {
                     id = Convert.ToUInt32(aux[0]),
                     endpoint = Convert.ToUInt32(aux[1]),
                     nRequests = Convert.ToUInt32(aux[2])
-
                 };
-
                 videoRequests.Add(videoRqst);
-
             }
-
-            // Suspend the screen.
             Console.ReadLine();
 		}
 	}
